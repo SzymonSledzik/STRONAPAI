@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Ankieta
+    </title>
+    <link rel="stylesheet" href="main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form id="form" action="connect.php" method="post">
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Imie
+            </label>
+            <input type="text" id="name" name="name" placeholder="Imie" />
+        </div>
+
+        <div class="form-control">
+
+            <label for="surname" id="label-name">
+                Nazwisko
+            </label>
+            <input type="text" id="surname" placeholder="Nazwisko" name="surname" />
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+            <input type="email" id="email" placeholder="Email" name="email" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Wiek
+            </label>
+            <input type="text" id="age" placeholder="Wiek" name="age" />
+        </div>
+
+        <div class="form-control">
+            <label for="place" id="label-place">
+                Miejsce urodzenia
+            </label>
+            <input type="text" id="place" placeholder="Miejsce urodzenia" name="place" />
+        </div>
+
+        <div class="form-control">
+            <label for="adress" id="label-place">
+                Adres
+            </label>
+            <input type="text" id="adress" placeholder="Adres" name="adress" />
+        </div>
+
+        <div class="form-control">
+            <label for="school" id="label-place">
+                Nazwa szkoly
+            </label>
+            <input type="text" id="school" placeholder="Nazwa szkoly" name="school" />
+        </div>
+
+        <div class="form-control">
+            <label for="grade" id="label-place">
+                Klasa
+            </label>
+            <input type="text" id="grade" placeholder="Klasa" name="grade" />
+        </div>
+
+        <button type="submit" value="submit">
+            KONTYNUUJ
+        </button>
+    </form>
+
+</body>
+
+</html>
