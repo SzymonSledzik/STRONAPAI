@@ -8,12 +8,18 @@
 </head>
 <body>
 
-	<div id="holder"></div>
-	<button>Submit</button>
+	<form method="POST">
+		<div id="holder"></div>
+		<button type="submit" name="submit">Submit</button>
+	</form>
 
 	<?php
 
 		include("connection.php");
+
+		if(isset($_POST['submit'])) {
+			submit_data();
+		}
 
 		function get_data() {
 			global $con, $data;
@@ -52,10 +58,10 @@
 						<div class='div' id='div$count'>
 							<p>$question</p>
 
-							<label for='true$i$char_array[$z]' class='label''>Tak</label>
-							<input type='radio' name='checkbox$i$char_array[$z]' id='true$i$char_array[$z]'>
+							<label for='true$i$char_array[$z]' class='label'>Tak</label>
+							<input type='radio' name='checkbox$i$char_array[$z]' id='true$i$char_array[$z]' value='Tak'>
 
-							<label for='nie$i$char_array[$z]' class='label''>Nie</label>
+							<label for='nie$i$char_array[$z]' class='label'>Nie</label>
 							<input type='radio' name='checkbox$i$char_array[$z]' id='nie$i$char_array[$z]'>
 
 						</div>
@@ -63,9 +69,45 @@
 					$count++;
 				}
 			}
-		} 
+		}
 
 		print_data();
+
+
+		function submit_data() {
+			$points = [
+				"K"=> 0,
+				"S"=> 0,
+				"M"=> 0,
+				"I"=> 0,
+				"T"=> 0
+			];
+		
+			$array_with_char = ['K', 'S', 'M', 'I', 'T'];
+
+			$error = 0;
+			for($i=1; $i<=2; $i++) {
+				for($z=0; $z<sizeof($array_with_char); $z++) {
+					if(isset($_POST["checkbox".$i.$array_with_char[$z]])) {
+						if($_POST["checkbox".$i.$array_with_char[$z]] == "Tak") {
+								$points[$array_with_char[$z]] += 1;
+							}
+					}
+					else if(!isset($_POST["checkbox".$i.$array_with_char[$z]])) {
+						$error = 1;
+					}
+
+				}
+			}
+
+			if($error == 1) {
+				echo "<script>alert('Nie zaznaczono odpowiedzi!');</script>";
+			}
+			else {
+				print_r($points);
+			}
+
+		}
 
 
 
