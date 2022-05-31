@@ -1,0 +1,59 @@
+INSERT INTO pytania (id_char, Pytanie)
+VALUES
+("M", "Czy sprawia Ci satysfakcję doprowadzenie jakiegoś zadania
+do końca? "),
+("M", "Czy wolałbyś mieć taką pracę, w której zawsze będziesz
+wiedział, czego się od ciebie oczekuje? "),
+("M", "Czy projekty lub inne prace wykonujesz dokładnie, krok po
+kroku?"),
+("M", "Czy chciałbyś opierać się w swojej pracy na wyraźnie
+określonych zasadach i regułach?"),
+("M", "Czy potrafisz pracować nad jakimś zadaniem przez dłuższy
+czas? "),
+("M", "Czy lubisz pracować według wskazówek innych ludzi?"),
+("M", "Czy chciałbyś mieć taką pracę, gdzie twoje czynności są na
+ogół ściśle kontrolowane?"),
+("M", "Czy podejmujesz się nowego zadania wtedy, gdy skończysz
+poprzednie?"),
+("M", "Czy chciałbyś mieć stanowisko pracy, które wymaga stałego
+poszerzania swoich umiejętności?"),
+("M", "Czy umiesz przyjmować polecenia od innych?"),
+("I", "Czy czujesz się dobrze, gdy jesteś odpowiedzialny za wiele
+spraw jednocześnie?"),
+("I", "Czy lubisz kanał naukowy Discovery Chanell, czasopismo
+National Geographic lub inne tego typu? "),
+("I", "Czy lubisz zagłębiać się w problemy, nad którymi pracujesz?"),
+("I", "Czy rozwiązując problem, chciałbyś opierać się na
+niepodważalnych faktach?"),
+("I", "Czy podobałaby Ci się praca, w której każdy dzień niósłby
+nowe, różnorodne zadania?"),
+("I", "Czy chciałbyś wykonywać pracę archeologa?"),
+("I", "Czy jesteś w stanie radzić sobie w sytuacji, gdy nieustannie
+dzieje się coś nowego i ciekawego?"),
+("I", "Czy lubisz realizować zadania, które pozwalają odkrywać
+nieznane Ci rzeczy, zagadnienia, fakty?"),
+("I", "Czy eksperymentowałeś i wykorzystywałeś różne pomysły,
+aby rozwiązać jakiś problem? "),
+("I", "Czy lubisz takie działania, których wynik daje się obiektywnie
+zmierzyć?"),
+("T", "Czy lubisz konstruować i naprawiać różne rzeczy? "),
+("T", "Czy potrafisz projektować, wymyślać lub tworzyć różne
+przedmioty? "),
+("T", "Czy masz jakieś własne hobby?"),
+("T", "Czy odwiedzasz w Internecie portale z grami i łamigłówkami
+logicznymi?"),
+("T", "Czy podoba Ci się praca wymagająca używania narzędzi
+lub maszyn?"),
+("T", "Czy chciałbyś pracować z materiałem takim jak drewno, glina,
+metal, kamień, tkanina? "),
+("T", "Czy chciałbyś być przez cały dzień operatorem jakiegoś
+urządzenia?"),
+("T", "Czy potrafisz wyjaśnić zasadę działania telefonu
+komórkowego?"),
+("T", "Czy cieszy Cię, kiedy dzięki książkom lub programom
+telewizyjnym możesz dowiedzieć się, jak działają różne
+urządzenia? 
+"),
+("T", "Czy raczej wolałbyś pracę nie wymagająca kontaktu
+z ludźmi?")
+;
