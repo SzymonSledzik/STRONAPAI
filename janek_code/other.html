@@ -9,17 +9,14 @@
 </head>
 <body>
 
-	<div id="holder"></div>
-
-	<button onclick="submit_data()">Submit</button>
+	<div id="holder">
+	</div>
 
 	<script type="text/javascript">
 		
 		function print_data() {
 			$.getJSON("questions.json", function(data) {
 				var holder = document.querySelector("#holder");
-
-				data[K][1]
 
 				//tablica z literami
 				const array_with_char = ['K', 'S', 'M', 'I', 'T'];
@@ -86,9 +83,18 @@
 						false_checkbox.name = "checkbox"+i+array_with_char[z];
 						//false_append checkbox into div
 						div.appendChild(false_checkbox);
+
 					}
 				}
-				
+				//----------create submit button-------
+				let button = document.createElement("button");
+				button.innerHTML = "Submit";
+				button.id = "submit";
+				holder.appendChild(button);
+
+				button.onclick = function() {
+					submit_data();
+				}
 			});
 		}
 
@@ -146,7 +152,7 @@
 
 		*/
 
-			
+
 		window.onload = function() {
 			print_data();
 		}

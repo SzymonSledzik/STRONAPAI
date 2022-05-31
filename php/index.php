@@ -31,7 +31,7 @@
 		$data = [];
 
 		for ($i = 0; $i < sizeof($char_array); $i++) {
-			$basic_sql = "SELECT * FROM test WHERE id_char='{$char_array[$i]}'";
+			$basic_sql = "SELECT * FROM pytania WHERE id_char='{$char_array[$i]}'";
 			$basic_query = mysqli_query($con, $basic_sql);
 
 			$counter = 1;

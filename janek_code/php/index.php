@@ -49,6 +49,8 @@
 			$char_array = ['K', 'S', 'M', 'I', 'T'];
 
 			$count = 1;
+			//pod dodaniu do danych do bazdy danych zmieniasz
+			//z $i<=2 na $i<=10
 			for($i=1; $i<=2; $i++) {
 				for($z=0; $z<sizeof($char_array); $z++) {
 					//print question
