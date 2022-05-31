@@ -53,7 +53,7 @@
 				for($z=0; $z<sizeof($char_array); $z++) {
 					//print question
 					$question = $count.'. '.($array_data[$char_array[$z]][$i]["Question"])."<br>";
-
+					//create questions
 					echo "
 						<div class='div' id='div$count'>
 							<p>$question</p>
