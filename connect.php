@@ -16,7 +16,7 @@ if ($conn->connect_error) {
     values(?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssisssi", $Name, $Surname, $Email, $Age, $Place, $Adress, $School, $Grade);
     $stmt->execute();
-    header("Location: /Formularz/pytania1.html", true, 301);
+    header("Location: /Formularz/php/pytania_50.php", true, 301);
     exit();
     $stmt->close();
     $conn->close();
