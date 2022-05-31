@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 31 Maj 2022, 23:01
+-- Czas generowania: 31 Maj 2022, 23:50
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 8.1.6
 
@@ -92,6 +92,49 @@ INSERT INTO `pytania` (`id`, `id_char`, `Pytanie`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `pytania2`
+--
+
+CREATE TABLE `pytania2` (
+  `id` int(255) NOT NULL,
+  `Pytanie` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `pytania2`
+--
+
+INSERT INTO `pytania2` (`id`, `Pytanie`) VALUES
+(1, 'Nie zależy mi specjalnie na tym, żeby być dobrym uczniem.'),
+(2, 'Bardzo lubię uczestniczyć w różnorodnych zajęciach pozaszkolnych.'),
+(3, 'Szkołę da się lubić, bez niej byłoby okropnie nudno.'),
+(4, 'Wcześnie w życiu wykonywałem różne drobne prace.'),
+(5, 'Nie przejmuję się zbytnio tym, co myślą o mnie inni.'),
+(6, 'Zdarza się, że podejmuję ryzyko dla emocji.'),
+(7, 'Zadania muszę zaplanować i zorganizować przed ich wykonaniem.'),
+(8, 'Często zdarza mi się zrobić coś tylko po to, żeby udowodnić (sobie lub innym), że to potrafię.'),
+(9, 'Nie przejmuję się drobiazgami.'),
+(10, 'Naprawdę dobra praca wcale nie musi gwarantować bezpieczeństwa finansowego.'),
+(11, 'Łatwo się nudzę.'),
+(12, 'Często bywam dumny ze swoich osiągnięć.'),
+(13, 'Satysfakcja z pracy jest dużo ważniejsza niż pieniądze.'),
+(14, 'Zdarzyło mi się przekroczyć swoje uprawnienia, żeby zrealizować cel.'),
+(15, 'Gdy coś mi nie wychodzi, najczęściej winię innych.'),
+(16, 'Zdarza mi się upierać przy swoim, nawet gdy inni mówią, że to się nie uda.'),
+(17, 'Najczęściej budzę się rano w dobrym nastroju.'),
+(18, 'Wykształcenie wcale nie ma decydującego znaczenia w tym, by być przedsiębiorcą.'),
+(19, 'Korzystam aktywnie z usług bankowości.'),
+(20, 'Rzadko choruję.'),
+(21, 'Przedsiębiorcy w dzisiejszych czasach wcale nie podejmują kolosalnego ryzyka.'),
+(22, 'Lubię podejmować ważne decyzje'),
+(23, 'Zawsze wyciągam wnioski ze swoich błędów.'),
+(24, 'Rozwiązanie trudnych problemów przychodzi mi łatwiej niż innym.'),
+(25, 'Większość trudnych zadań jakie podejmuję, traktuję jako osobiste wyzwanie.'),
+(26, 'Własna firma jest dużo większym osiągnięciem niż kierownicze stanowisko w cudzej firmie.');
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `test`
 --
 
@@ -128,6 +171,12 @@ ALTER TABLE `pytania`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `pytania2`
+--
+ALTER TABLE `pytania2`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `test`
 --
 ALTER TABLE `test`
@@ -142,6 +191,12 @@ ALTER TABLE `test`
 --
 ALTER TABLE `pytania`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+
+--
+-- AUTO_INCREMENT dla tabeli `pytania2`
+--
+ALTER TABLE `pytania2`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT dla tabeli `test`
