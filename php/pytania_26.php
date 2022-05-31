@@ -17,6 +17,11 @@
 	<?php
 
 	include("connection.php");
+
+	if(isset($_POST['send'])) {
+		count_ponts();
+	}
+
 	function main()
 	{
 		global $con;
@@ -46,16 +51,45 @@
 			echo "
 					<div class='div'>
 						<p>$i. $question</p>
-						<input type='number' max=2 min=0 value=0>
+						<input name='inputs$i' type='number' max=2 min=0 value=0>
 					</div>
 				";
 		}
-		echo "<div id='holder'> <button class='button' type='submit' value='submit'>Wyślij</button> </div>";
+		echo "<div id='button_holder'> <button class='button' type='submit' name='send' value='submit'>Wyślij</button> </div>";
 	}
 
 	print_data();
 
+
+	function count_ponts() {	
+		$suma = 0;
+		$data = main();
+
+		for($i=1; $i<=sizeof($data); $i++) {
+			if(isset($_POST['inputs'.$i])) {
+				$suma += $_POST['inputs'.$i];
+			}
+		}
+		echo "<script>alert('Wynik: $suma');</script>";
+	}
+
 	?>
+
+	<script type="text/javascript">
+			
+		window.onload = function() {
+			let div = document.querySelectorAll('.div');
+			let holder = document.querySelector('#holder');
+
+			for(let i=0; i<div.length; ++i) {
+				holder.appendChild(div[i]);
+			}
+
+			holder.appendChild(document.querySelector("#button_holder"));
+		}
+
+	</script>
+
 </body>
 
 </html>

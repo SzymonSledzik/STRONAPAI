@@ -19,7 +19,8 @@
 	include("connection.php");
 
 	if (isset($_POST['submit'])) {
-		submit_data();
+		$result = submit_data();
+		echo "<script>alert('$result');</script>";
 	}
 
 	function get_data()
@@ -91,7 +92,7 @@
 		$array_with_char = ['K', 'S', 'M', 'I', 'T'];
 
 		$error = 0;
-		for ($i = 1; $i <= 2; $i++) {
+		for ($i = 1; $i <= 10; $i++) {
 			for ($z = 0; $z < sizeof($array_with_char); $z++) {
 				if (isset($_POST["checkbox" . $i . $array_with_char[$z]])) {
 					if ($_POST["checkbox" . $i . $array_with_char[$z]] == "Tak") {
@@ -103,15 +104,17 @@
 			}
 		}
 
-		if ($error == 1) {
-			echo "<script>alert('Nie zaznaczono odpowiedzi!');</script>";
-		} else {
+		if($error == 1) {
+			return "Nie zaznaczono odpowiedzi";
+		}
+		else {
 			//highest value
 			$maxVal = max($points);
 			//search key fo the highest valueś
 			$maxKey = array_search($maxVal, $points);
 
-			echo "Highest score for $maxKey: $maxVal";
+			$results = "Highest score on $maxKey: $maxVal";
+			return $results;
 		}
 	}
 
