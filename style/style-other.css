@@ -1,0 +1,26 @@
+#holder {
+	width: 50%;
+	border: 10px solid black;
+}
+
+.div {
+	padding: 20px;
+	background-color: #d9d9d9;
+}
+
+.label {
+	margin-left: 10px;
+}
+
+button {
+	width: 100px;
+	height: 50px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	margin-left: 20px;
+	font-size: 20px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	background-color: green;
+}

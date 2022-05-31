@@ -1,0 +1,47 @@
+{
+	"K": {
+		"1": {
+			"Pytanie": "1 Czy chciałbyś mieć taką pracę, w której kierujesz działaniami innych pracowników?"
+		},
+		"2": {
+			"Pytanie": "6 Czy lubisz brać na siebie odpowiedzialność za zadania wywiązywać się z nich?"
+		}
+	},
+
+	"S": {
+		"1": {
+			"Pytanie": "2 Czy zdarza Ci się pomóc innym nie oczekując niczego w zamian?"
+		},
+		"2": {
+			"Pytanie": "7 Czy zdarza Ci się mieć lepsze pomysły od Twoich kolegów/koleżanek na rozwiązanie jakiegoś zadania?"
+		}
+	},
+
+	"M": {
+		"1": {
+			"Pytanie": "3 Czy sprawia Ci satysfakcję doprowadzenie jakiegoś zadania do końca?"
+		},
+		"2": {
+			"Pytanie": "8 Czy wolałbyś mieć taką pracę, w której zawsze będziesz wiedział, czego się od ciebie oczekuje?"
+		}
+	},
+
+	"I": {
+		"1": {
+			"Pytanie": "4 Czy czujesz się dobrze, gdy jesteś odpowiedzialny za wiele spraw jednocześnie?"
+		},
+		"2": {
+			"Pytanie": "9 Czy lubisz kanał naukowy Discovery Chanell, czasopismo National Geographic lub inne tego typu?"
+		}
+	},
+
+	"T": {
+		"1": {
+			"Pytanie": "5 Czy lubisz konstruować i naprawiać różne rzeczy?"
+		},
+		"2": {
+			"Pytanie": "10 Czy potrafisz projektować, wymyślać lub tworzyć różne przedmioty?"
+		}
+	}	
+
+}

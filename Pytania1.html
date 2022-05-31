@@ -1,90 +1,159 @@
 <!DOCTYPE html>
-<html lang="pl">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Ankieta
-    </title>
-    <link rel="stylesheet" href="main.css">
-    <script src="script.js"></script>
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/style-other.css">
+	<title>Strona</title>
 </head>
-
 <body>
-    <form>
-        <table style="width: 100%; border-spacing: 15px ; border: 1px solid black; text-align: left;">
-            <tr>
-                <th>Zaznacz</th>
-                <th>TAK</th>
-                <th>NIE</th>
-                <br>
-            </tr>
-            <tr>
-                <td>Czy chciałbyś mieć taką pracę, w której kierujesz działaniami
-                    innych pracowników?</td>
-                <td><input type="checkbox" value="checked" id="k1"></td>
-                <td><input type="checkbox"></td>
-                <br>
-            </tr>
-            <tr>
-                <td>Czy chciałbyś mieć taką pracę, w której kierujesz działaniami
-                    innych pracowników?</td>
-                <td><input type="checkbox" value="checked" id="k2"></td>
-                <td><input type="checkbox"></td>
-                <br>
-            </tr>
-            <tr>
-                <td>Czy chciałbyś mieć taką pracę, w której kierujesz działaniami
-                    innych pracowników?</td>
-                <td><input type="checkbox" value="checked" id="k3"></td>
-                <td><input type="checkbox"></td>
-                <br>
-            </tr>
-            <tr>
-                <td>Czy chciałbyś mieć taką pracę, w której kierujesz działaniami
-                    innych pracowników?</td>
-                <td><input type="checkbox" value="checked" id="s1"></td>
-                <td><input type="checkbox"></td>
-                <br>
-            </tr>
-            <tr>
-                <td>Czy chciałbyś mieć taką pracę, w której kierujesz działaniami
-                    innych pracowników?</td>
-                <td><input type="checkbox" value="checked" id="s2"></td>
-                <td><input type="checkbox"></td>
-                <br>
-            </tr>
-            <tr>
-                <td>Czy chciałbyś mieć taką pracę, w której kierujesz działaniami
-                    innych pracowników?</td>
-                <td><input type="checkbox" value="checked" id="i1"></td>
-                <td><input type="checkbox"></td>
-                <br>
-            </tr>
-            <tr>
-                <td>Czy chciałbyś mieć taką pracę, w której kierujesz działaniami
-                    innych pracowników?</td>
-                <td><input type="checkbox" value="checked" id="m1"></td>
-                <td><input type="checkbox"></td>
-                <br>
-            </tr>
-            <tr>
-                <td>Czy chciałbyś mieć taką pracę, w której kierujesz działaniami
-                    innych pracowników?</td>
-                <td><input type="checkbox" value="checked" id="t1"></td>
-                <td><input type="checkbox"></td>
-                <br>
-            </tr>
+
+	<div id="holder"></div>
+
+	<button onclick="submit_data()">Submit</button>
+
+	<script type="text/javascript">
+		
+		function print_data() {
+			$.getJSON("questions.json", function(data) {
+				var holder = document.querySelector("#holder");
+
+				data[K][1]
+
+				//tablica z literami
+				const array_with_char = ['K', 'S', 'M', 'I', 'T'];
+
+				for(let i=1; i<=2; i++) {
+					for(let z=0; z<array_with_char.length; z++) {
+						//create div
+						let div = document.createElement("div");
+						div.className = "div";
+						holder.appendChild(div);
+
+						//tworzenie paragrafu
+						let p = document.createElement("p");
+						//przypisywanie tekstu
+						p.innerHTML = (data[array_with_char[z]][i]["Pytanie"]);
+						//dodanie go do diva holder
+						div.appendChild(p);
 
 
-        </table>
-        <div>
-            <button type="button" id="przycisk" onclick="checkWynikKSMIT()">SPRAWDZ WYNIK</button>
-        </div>
-    </form>
+
+						//-------create checkboxs and labels-------
+
+						//---true label---
+						let true_label = document.createElement("label");
+						//set for attr
+						true_label.setAttribute("for", "true"+i+array_with_char[z]);
+						//set innerHTML
+						true_label.innerHTML = "Tak";
+						//set className
+						true_label.className = "label";
+						//append label to div
+						div.appendChild(true_label);
+
+						//true checkbox
+						let true_checkbox = document.createElement("input");
+						//set id
+						true_checkbox.id = "true"+i+array_with_char[z];
+						//set attribute for checkbox
+						true_checkbox.setAttribute("type", "radio");
+						//set name
+						true_checkbox.name = "checkbox"+i+array_with_char[z];
+						//true_append checkbox into div
+						div.appendChild(true_checkbox);
+
+
+						//---false label---
+						let false_label = document.createElement("label");
+						//set for attr
+						false_label.setAttribute("for", "false"+i+array_with_char[z]);
+						//set innerHTML
+						false_label.innerHTML = "Nie";
+						//set className
+						false_label.className = "label";
+						//append label to div
+						div.appendChild(false_label);
+
+						//false checkbox
+						let false_checkbox = document.createElement("input");
+						//set id
+						false_checkbox.id = "false"+i+array_with_char[z];
+						//set attribute for checkbox
+						false_checkbox.setAttribute("type", "radio");
+						//set name
+						false_checkbox.name = "checkbox"+i+array_with_char[z];
+						//false_append checkbox into div
+						div.appendChild(false_checkbox);
+					}
+				}
+				
+			});
+		}
+
+
+		function submit_data() {
+				let points = {
+					"K": 0,
+					"S": 0,
+					"M": 0,
+					"I": 0,
+					"T": 0
+				};
+			
+				const array_with_char = ['K', 'S', 'M', 'I', 'T'];
+
+				for(let i=1; i<=2; i++) {
+					for(let z=0; z<array_with_char.length; ++z) {
+						if(document.querySelector("#true"+i+array_with_char[z]).checked) {
+							points[array_with_char[z]] += 1;
+						}
+					}
+				}
+
+				console.log(points);
+		}
+
+		/*
+		
+			Funkcja która po kliknieciu przycisku zatwierdz bedzie sumowała wszytskie radio = tak;
+
+			radio.id = tak1K, radio.id = tak2S....
+
+			------Algorytm---------------------------------------------
+	
+			function count() {
+				
+				let points = [
+					"K": 0,
+					"S": 0,
+					"M": 0,
+					"I": 0,
+					"T": 0
+				];
+			
+				const array_with_char = ['K', 'S', 'M', 'I', 'T'];
+
+				for(let i=1; i<=10; i++) {
+					for(let z=0; z<array_with_char.length; ++z) {
+						if(document.querySelector("#tak"+i+array_with_char[z]).checked) {
+							points[array_with_char[z]] += 1;
+						}
+					}
+				}
+			}
+
+		*/
+
+			
+		window.onload = function() {
+			print_data();
+		}
+
+
+	</script>
+
 
 </body>
-
 </html>
