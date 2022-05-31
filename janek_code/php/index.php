@@ -103,8 +103,13 @@
 			if($error == 1) {
 				echo "<script>alert('Nie zaznaczono odpowiedzi!');</script>";
 			}
-			else {
-				print_r($points);
+			else {	
+				//highest value
+				$maxVal = max($points);
+				//search key fo the highest valueś
+				$maxKey = array_search($maxVal, $points);
+
+				echo "Highest score for $maxKey: $maxVal";
 			}
 
 		}
