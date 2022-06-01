@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 31 Maj 2022, 23:50
+-- Czas generowania: 01 Cze 2022, 11:42
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 8.1.6
 
@@ -135,6 +135,34 @@ INSERT INTO `pytania2` (`id`, `Pytanie`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `registration`
+--
+
+CREATE TABLE `registration` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  `Surname` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Age` int(99) NOT NULL,
+  `Place` varchar(50) NOT NULL,
+  `Adress` varchar(50) NOT NULL,
+  `School` varchar(50) NOT NULL,
+  `Grade` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `registration`
+--
+
+INSERT INTO `registration` (`ID`, `Name`, `Surname`, `Email`, `Age`, `Place`, `Adress`, `School`, `Grade`) VALUES
+(11, '123', '123', '123@gmail.com', 123, '123', '123', '123', 2),
+(12, 'szymon', '123', '123@gmail.com', 123, '123', '123', '123', 2),
+(13, '', '', '', 0, '', '', '', 0),
+(14, '12321', '', '123@gmail.com', 0, '', '', '', 2);
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `test`
 --
 
@@ -177,6 +205,12 @@ ALTER TABLE `pytania2`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `registration`
+--
+ALTER TABLE `registration`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indeksy dla tabeli `test`
 --
 ALTER TABLE `test`
@@ -197,6 +231,12 @@ ALTER TABLE `pytania`
 --
 ALTER TABLE `pytania2`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT dla tabeli `registration`
+--
+ALTER TABLE `registration`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT dla tabeli `test`
