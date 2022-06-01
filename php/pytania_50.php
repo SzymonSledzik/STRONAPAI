@@ -4,13 +4,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../style/main.css">
+	<link rel="stylesheet" type="text/css" href="../style/style-other.css">
 	<title>Strona w PHP</title>
 </head>
 
 <body>
 	<form method="POST">
 		<div id="holder"></div>
+		<button class="button" type="submit" name="submit">Wyślij</button>
 	</form>
 	<?php
 	include("connection.php");
@@ -38,6 +39,7 @@
 		}
 		return $data;
 	}
+
 	function print_data()
 	{
 		$array_data = get_data();
@@ -60,10 +62,8 @@
 				$count++;
 			}
 		}
-		echo "<div id='button_holder'> <button class='button' type='submit' name='send' value='submit'>Wyślij</button> </div>";
 	}
 	print_data();
-
 	function submit_data()
 	{
 		$points = [
@@ -90,29 +90,26 @@
 
 		if ($error == 1) {
 			return "Nie zaznaczono odpowiedzi";
-		} else {
-			//highest value
+		} else { //highest value
 			$maxVal = max($points);
 			//search key fo the highest valueś
 			$maxKey = array_search($maxVal, $points);
-			echo "<script>alert('Wynik: $maxKey');</script>";
+			$results = "Highest score on $maxKey: $maxVal";
+			return $results;
 		}
 	}
 
 	?>
 	<script type="text/javascript">
 		window.onload = function() {
-			let div = document.querySelectorAll('.div');
-			let holder = document.querySelector('#holder');
-
-			for (let i = 0; i < div.length; ++i) {
-				holder.appendChild(div[i]);
+			//get all questions div
+			let questions_div = document.querySelectorAll(".div");
+			for (let i = 0; i < questions_div.length; ++i) {
+				//append question div into holder
+				document.querySelector("#holder").appendChild(questions_div[i]);
 			}
-
-			holder.appendChild(document.querySelector("#button_holder"));
 		}
 	</script>
-
 </body>
 
 </html>
