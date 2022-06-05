@@ -4,12 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../style/style-other.css">
-	<title>Strona w PHP</title>
+	<link rel="stylesheet" type="text/css" href="../style/main.css">
+	<title>Strona 50 pytań</title>
 </head>
 
 <body>
-	<form method="POST">
+	<form method="POST" value="POST">
 		<div id="holder"></div>
 		<button class="button" type="submit" name="submit">Wyślij</button>
 	</form>

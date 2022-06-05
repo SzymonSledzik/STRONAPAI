@@ -10,7 +10,7 @@
 
 <body>
 
-	<form method="POST">
+	<form method="POST" value="POST">
 		<div id="holder"></div>
 	</form>
 
@@ -51,7 +51,8 @@
 			echo "
 					<div class='div'>
 						<p>$i. $question</p>
-						<input name='inputs$i' type='number' max=2 min=0 value=0>
+						<input name='inputs$i' type='range' max=2 min=0 value=0 class='slider'>
+						<p>0ㅤㅤㅤ1ㅤㅤㅤ2</p>
 					</div>
 				";
 		}
@@ -88,7 +89,6 @@
 			holder.appendChild(document.querySelector("#button_holder"));
 		}
 	</script>
-
 </body>
 
 </html>

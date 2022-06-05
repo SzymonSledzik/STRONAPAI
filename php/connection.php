@@ -1,9 +1,9 @@
 <?php
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$database = "formularz";
+	$servername = "192.168.101.62";
+	$username = "labzsk_ssledzik";
+	$password = "771pen12a";
+	$database = "labzsk_ssledzik";
 
 	//connectiong with database
 	$con = mysqli_connect($servername, $username, $password, $database);
