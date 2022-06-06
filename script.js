@@ -95,26 +95,6 @@ function submit_data() {
     console.log(points);
 }
 
-function count() {
-
-    let points = [
-        "K" = 0,
-        "S" = 0,
-        "M" = 0,
-        "I" = 0,
-        "T" = 0
-    ];
-
-    const array_with_char = ['K', 'S', 'M', 'I', 'T'];
-
-    for (let i = 1; i <= 10; i++) {
-        for (let z = 0; z < array_with_char.length; ++z) {
-            if (document.querySelector("#tak" + i + array_with_char[z]).checked) {
-                points[array_with_char[z]] += 1;
-            }
-        }
-    }
-}
 
 window.onload = function () {
     print_data();
