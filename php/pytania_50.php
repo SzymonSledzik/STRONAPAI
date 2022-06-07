@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl-PL">
 
 <head>
 	<meta charset="utf-8">
@@ -94,8 +94,22 @@
 			$maxVal = max($points);
 			//search key fo the highest valueś
 			$maxKey = array_search($maxVal, $points);
-			$results = "Highest score on $maxKey: $maxVal";
-			return $results;
+			$results = "Najlepszy wynik uzyska�e� w $maxKey: $maxVal";
+			if ($maxKey == "K") {
+				echo "K";
+			}
+			if ($maxKey == "S") {
+				echo "S";
+			}
+			if ($maxKey == "M") {
+				echo "M";
+			}
+			if ($maxKey == "I") {
+				echo "I";
+			}
+			if ($maxKey == "T") {
+				echo "T";
+			}
 		}
 	}
 

@@ -59,8 +59,8 @@ button {
     }
 
     .div {
-        max-width: 1000px;
-        min-width: 1000px;
+        max-width: 1200px;
+        min-width: 700px;
         margin: 25px auto;
         padding: 30px 20px;
         box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);

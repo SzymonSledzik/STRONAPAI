@@ -89,6 +89,15 @@
 			holder.appendChild(document.querySelector("#button_holder"));
 		}
 	</script>
+	<script> 
+		var slider = document.getElementsById("myRange");
+		var output = document.getElementsById("demo");
+		output.innerHTML = slider.value;
+
+		slider.oninput = function() {
+		output.innerHTML = this.value;
+		}
+	</script>
 </body>
 
 </html>

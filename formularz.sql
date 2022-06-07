@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 01 Cze 2022, 11:42
+-- Czas generowania: 31 Maj 2022, 23:50
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 8.1.6
 
@@ -135,59 +135,8 @@ INSERT INTO `pytania2` (`id`, `Pytanie`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `registration`
---
-
-CREATE TABLE `registration` (
-  `ID` int(11) NOT NULL,
-  `Name` varchar(50) NOT NULL,
-  `Surname` varchar(50) NOT NULL,
-  `Email` varchar(50) NOT NULL,
-  `Age` int(99) NOT NULL,
-  `Place` varchar(50) NOT NULL,
-  `Adress` varchar(50) NOT NULL,
-  `School` varchar(50) NOT NULL,
-  `Grade` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Zrzut danych tabeli `registration`
---
-
-INSERT INTO `registration` (`ID`, `Name`, `Surname`, `Email`, `Age`, `Place`, `Adress`, `School`, `Grade`) VALUES
-(11, '123', '123', '123@gmail.com', 123, '123', '123', '123', 2),
-(12, 'szymon', '123', '123@gmail.com', 123, '123', '123', '123', 2),
-(13, '', '', '', 0, '', '', '', 0),
-(14, '12321', '', '123@gmail.com', 0, '', '', '', 2);
-
--- --------------------------------------------------------
-
---
 -- Struktura tabeli dla tabeli `test`
 --
-
-CREATE TABLE `test` (
-  `id` int(255) NOT NULL,
-  `id_char` varchar(1) DEFAULT NULL,
-  `Pytanie` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Zrzut danych tabeli `test`
---
-
-INSERT INTO `test` (`id`, `id_char`, `Pytanie`) VALUES
-(9, 'K', 'Czy chciałbyś mieć taką pracę, w której kierujesz działaniami innych pracowników? '),
-(10, 'K', 'Czy lubisz brać na siebie odpowiedzialność za zadania i wywiązywać się z nich? '),
-(11, 'S', 'Czy zdarza Ci się pomóc innym nie oczekując niczego w zamian?'),
-(12, 'S', 'Czy zdarza Ci się mieć lepsze pomysły od Twoich kolegów/koleżanek na rozwiązanie jakiegoś zadania?'),
-(13, 'M', 'Czy sprawia Ci satysfakcję doprowadzenie jakiegoś zadania do końca?'),
-(14, 'M', 'Czy wolałbyś mieć taką pracę, w której zawsze będziesz wiedział, czego się od ciebie oczekuje?'),
-(15, 'I', 'Czy czujesz się dobrze, gdy jesteś odpowiedzialny za wiele spraw jednocześnie?'),
-(16, 'I', 'Czy lubisz kanał naukowy Discovery Chanell, czasopismo National Geographic lub inne tego typu?'),
-(17, 'T', 'Czy lubisz konstruować i naprawiać różne rzeczy?'),
-(18, 'T', 'Czy potrafisz projektować, wymyślać lub tworzyć różne przedmioty?');
-
 --
 -- Indeksy dla zrzutów tabel
 --
@@ -205,17 +154,8 @@ ALTER TABLE `pytania2`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `registration`
---
-ALTER TABLE `registration`
-  ADD PRIMARY KEY (`ID`);
-
---
 -- Indeksy dla tabeli `test`
 --
-ALTER TABLE `test`
-  ADD PRIMARY KEY (`id`);
-
 --
 -- AUTO_INCREMENT dla zrzuconych tabel
 --
@@ -233,17 +173,8 @@ ALTER TABLE `pytania2`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT dla tabeli `registration`
---
-ALTER TABLE `registration`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
 -- AUTO_INCREMENT dla tabeli `test`
 --
-ALTER TABLE `test`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
