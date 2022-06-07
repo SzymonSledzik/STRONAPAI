@@ -5,7 +5,7 @@ body {
 	background-color: #652d99;
 	font-family: Verdana;
 	text-align: center;
-	font-size: 18.5px;
+	font-size: 18px;
 	font-weight: 500;
 }
 
@@ -18,8 +18,8 @@ body {
 
 .div {
 	background-color: rgb(236, 236, 236);
-	max-width: 450px;
-	min-width: 400px;
+	max-width: 500px;
+	min-width: 500px;
 	margin: 25px auto;
 	padding: 30px 20px;
 	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
@@ -37,8 +37,9 @@ button {
 	border-radius: 2px;
 	font-family: inherit;
 	font-size: 21px;
-	display: block;
-	min-width: 350;
+	display: inline-block;
+	justify-content: center;
+	min-width: 350px;
 	padding: 10px;
 	margin-top: 40px;
 	margin-bottom: 20px;
@@ -48,19 +49,18 @@ button {
 	width: 160px;
 }
 
-@media (min-width: 500px) {
+@media only screen and (min-width: 700px) {
 	body {
 		font-size: 20px;
+		/* background-color: #63be6a; */
 	}
 
 	.div {
-		max-width: 700px;
-		min-width: 700px;
+		max-width: 1000px;
+		min-width: 1000px;
 		margin: 25px auto;
 		padding: 30px 20px;
 		box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 		display: block;
 	}
-
-
 }

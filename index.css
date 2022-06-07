@@ -52,14 +52,15 @@ button {
     margin-bottom: 20px;
 }
 
-@media (min-width: 500px) {
+@media only screen and (min-width: 700px) {
     body {
         font-size: 20px;
+        /* background-color: #63be6a; */
     }
 
     .div {
-        max-width: 700px;
-        min-width: 700px;
+        max-width: 1000px;
+        min-width: 1000px;
         margin: 25px auto;
         padding: 30px 20px;
         box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
