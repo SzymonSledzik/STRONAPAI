@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 31 Maj 2022, 23:50
+-- Czas generowania: 10 Cze 2022, 20:39
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 8.1.6
 
@@ -135,6 +135,34 @@ INSERT INTO `pytania2` (`id`, `Pytanie`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `registration`
+--
+
+CREATE TABLE `registration` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  `Surname` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Age` int(99) NOT NULL,
+  `Place` varchar(50) NOT NULL,
+  `Adress` varchar(50) NOT NULL,
+  `School` varchar(50) NOT NULL,
+  `Grade` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `registration`
+--
+
+INSERT INTO `registration` (`ID`, `Name`, `Surname`, `Email`, `Age`, `Place`, `Adress`, `School`, `Grade`) VALUES
+(11, '123', '123', '123@gmail.com', 123, '123', '123', '123', 2),
+(12, 'szymon', '123', '123@gmail.com', 123, '123', '123', '123', 2),
+(13, '', '', '', 0, '', '', '', 0),
+(14, '12321', '', '123@gmail.com', 0, '', '', '', 2);
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `test`
 --
 
@@ -160,6 +188,19 @@ INSERT INTO `test` (`id`, `id_char`, `Pytanie`) VALUES
 (17, 'T', 'Czy lubisz konstruować i naprawiać różne rzeczy?'),
 (18, 'T', 'Czy potrafisz projektować, wymyślać lub tworzyć różne przedmioty?');
 
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `wynik`
+--
+
+CREATE TABLE `wynik` (
+  `ID` int(255) NOT NULL,
+  `UserID` int(255) DEFAULT NULL,
+  `result_50` int(255) DEFAULT NULL,
+  `result_26` int(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indeksy dla zrzutów tabel
 --
@@ -177,10 +218,23 @@ ALTER TABLE `pytania2`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `registration`
+--
+ALTER TABLE `registration`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indeksy dla tabeli `test`
 --
 ALTER TABLE `test`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `wynik`
+--
+ALTER TABLE `wynik`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `UserID` (`UserID`);
 
 --
 -- AUTO_INCREMENT dla zrzuconych tabel
@@ -199,10 +253,32 @@ ALTER TABLE `pytania2`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
+-- AUTO_INCREMENT dla tabeli `registration`
+--
+ALTER TABLE `registration`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT dla tabeli `test`
 --
 ALTER TABLE `test`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT dla tabeli `wynik`
+--
+ALTER TABLE `wynik`
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- Ograniczenia dla zrzutów tabel
+--
+
+--
+-- Ograniczenia dla tabeli `wynik`
+--
+ALTER TABLE `wynik`
+  ADD CONSTRAINT `wynik_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `registration` (`ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
