@@ -16,7 +16,7 @@ if ($conn->connect_error) {
     values(?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssisssi", $Name, $Surname, $Email, $Age, $Place, $Adress, $School, $Grade);
     $stmt->execute();
-    header("Location: ./php/pytania_50.php", true, 301);
+    header("Location: ./php/pytania_50.php?id=$ID", true, 301);
     exit();
     $stmt->close();
     $conn->close();

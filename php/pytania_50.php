@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang = "pl-PL">
+<html lang="pl-PL">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../style/main.css">
-	<title>Strona 50 pytañ</title>
+	<title>Strona 50 pytaï¿½</title>
 </head>
 
 <body>
 	<form method="POST" value="POST">
 		<div id="holder"></div>
-		<button class="button" type="submit" name="submit">Wyœlij</button>
+		<button class="button" type="submit" name="submit">Wyï¿½lij</button>
 	</form>
 	<?php
 	include("connection.php");
@@ -54,9 +54,9 @@
 						<div class='div' id='div$count'>
 							<p>$question</p>
 							<label for='true$i$char_array[$z]' class='label'>Tak</label>
-							<input type='radio' name='checkbox$i$char_array[$z]' id='true$i$char_array[$z]' value='POST['$i$char_array[$z]']'>
+							<input type='radio' name='checkbox$i$char_array[$z]' id='true$i$char_array[$z]' value='echo $_POST['checkbox$i$char_array[$z]'];'>
 							<label for='nie$i$char_array[$z]' class='label'>Nie</label>
-							<input type='radio' name='checkbox$i$char_array[$z]' id='nie$i$char_array[$z]'>
+							<input type='radio' name='checkbox$i$char_array[$z]' id='nie$i$char_array[$z]' value='echo $_POST['checkbox$i$char_array[$z]'];'>>
 						</div>
 					";
 				$count++;
@@ -94,22 +94,22 @@
 			$maxVal = max($points);
 			//search key fo the highest valueÅ›
 			$maxKey = array_search($maxVal, $points);
-			$results = "Najlepszy wynik uzyska³eœ w $maxKey: $maxVal";
-      if($maxKey == "K"){
-      echo "K";
-      }
-      if($maxKey == "S"){
-      echo "S";
-      }
-      if($maxKey == "M"){
-      echo "M";
-      }
-      if($maxKey == "I"){
-      echo "I";
-      }
-      if($maxKey == "T"){
-      echo "T";
-      }
+			$results = "Najlepszy wynik uzyskaï¿½eï¿½ w $maxKey: $maxVal";
+			if ($maxKey == "K") {
+				echo "K";
+			}
+			if ($maxKey == "S") {
+				echo "S";
+			}
+			if ($maxKey == "M") {
+				echo "M";
+			}
+			if ($maxKey == "I") {
+				echo "I";
+			}
+			if ($maxKey == "T") {
+				echo "T";
+			}
 		}
 	}
 
