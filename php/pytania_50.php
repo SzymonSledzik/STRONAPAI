@@ -53,10 +53,13 @@
 				echo "
 						<div class='div' id='div$count'>
 							<p>$question</p>
+
 							<label for='true$i$char_array[$z]' class='label'>Tak</label>
-							<input type='radio' name='checkbox$i$char_array[$z]' id='true$i$char_array[$z]' value='echo $_POST['checkbox$i$char_array[$z]'];'>
+							<input type='radio' name='checkbox$i$char_array[$z]' id='true$i$char_array[$z]' value='True' 
+							<?php isset($_POST['checkbox$i$char_array[$z]>
+
 							<label for='nie$i$char_array[$z]' class='label'>Nie</label>
-							<input type='radio' name='checkbox$i$char_array[$z]' id='nie$i$char_array[$z]' value='echo $_POST['checkbox$i$char_array[$z]'];'>>
+							<input type='radio' name='checkbox$i$char_array[$z]' id='nie$i$char_array[$z]' value='False'>
 						</div>
 					";
 				$count++;
