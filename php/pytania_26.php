@@ -16,7 +16,7 @@
 
 	<?php
 
-	include("connection.php");
+	include("connection26.php");
 
 	if (isset($_POST['send'])) {
 		count_ponts();
@@ -89,13 +89,13 @@
 			holder.appendChild(document.querySelector("#button_holder"));
 		}
 	</script>
-	<script> 
+	<script>
 		var slider = document.getElementsById("myRange");
 		var output = document.getElementsById("demo");
 		output.innerHTML = slider.value;
 
 		slider.oninput = function() {
-		output.innerHTML = this.value;
+			output.innerHTML = this.value;
 		}
 	</script>
 </body>

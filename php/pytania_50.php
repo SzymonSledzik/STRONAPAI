@@ -11,10 +11,11 @@
 <body>
 	<form method="POST" value="POST">
 		<div id="holder"></div>
-		<input class="button" type="submit" name="submit" value="Wyďż˝lij">
-
+		<div class="button">
+			<input class="button" type="submit" name="submit" value="Wyślij">
+		</div>
 		<?php
-		include("connection.php");
+		include("connection50.php");
 
 		if (isset($_POST['submit'])) {
 			$result = submit_data();

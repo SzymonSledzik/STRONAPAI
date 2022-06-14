@@ -31,7 +31,8 @@ body {
 	margin-left: 10px;
 }
 
-button {
+button,
+input[type=submit] {
 	background-color: #63be6a;
 	border: 1px solid #777;
 	border-radius: 2px;
@@ -50,7 +51,7 @@ button {
 }
 
 input[type=radio] {
-    transform: scale(1.75);
+	transform: scale(1.75);
 }
 
 @media only screen and (min-width: 700px) {
